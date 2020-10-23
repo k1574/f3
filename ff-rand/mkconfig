@@ -1,0 +1,4 @@
+NAME = ff-rand
+CPPFLAGS =
+CFLAGS = $CPPFLAGS
+LDFLAGS =

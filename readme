@@ -5,3 +5,4 @@ fff - farbfeld filters set.
 ## Description.
 
 * ff-info: Retrieve the width and/or height of a picture. 
+* ff-rand: Make the image filled with random pixels.

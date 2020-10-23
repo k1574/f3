@@ -1,6 +1,6 @@
 SRC = `{ls *.c}
 OBJ = ${SRC:%.c=%.o}
-#HDR = `{ls *.h}
+#HDR = `{ls *.h ../*.h}
 TGT = $NAME
 all :VQ: $TGT 
 $TGT : $OBJ
