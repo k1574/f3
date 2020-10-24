@@ -1,3 +1,10 @@
 CC = cc
 LD = $CC
+
+LOCAL = $HOME/local
+BIN = $LOCAL/bin
+SHR = $LOCAL/shr
+MAN = $SHR/man
+
 DIRS = ff-info ff-rand
+

@@ -2,3 +2,4 @@ NAME = ff-info
 CPPFLAGS =
 CFLAGS = $CPPFLAGS
 LDFLAGS =
+
