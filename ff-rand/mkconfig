@@ -1,5 +1,5 @@
 NAME = ff-rand
 CPPFLAGS =
-CFLAGS = $CPPFLAGS
+CFLAGS = 
 LDFLAGS =
 

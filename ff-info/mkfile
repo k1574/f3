@@ -1,3 +1,6 @@
 <../mkconfig
 <mkconfig
+SRC = `{ls *.c}
+HDR = 
 <../stdmkfile
+

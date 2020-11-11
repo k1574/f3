@@ -1,9 +1,8 @@
-CC = cc
+CC = tcc
 LD = $CC
 
-LOCAL = $HOME/local
-BIN = $LOCAL/bin
-SHR = $LOCAL/shr
+EXE = $HOME/exe
+SHR = $HOME/shr
 MAN = $SHR/man
 
 DIRS = ff-info ff-rand

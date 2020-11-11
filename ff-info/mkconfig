@@ -1,5 +1,5 @@
 NAME = ff-info
 CPPFLAGS =
-CFLAGS = $CPPFLAGS
+CFLAGS = 
 LDFLAGS =
 
