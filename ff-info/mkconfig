@@ -1,5 +1,4 @@
-NAME = ff-info
-CPPFLAGS =
-CFLAGS = 
-LDFLAGS =
+<$MKINCDIR/config
+PROGNAME = ff-info
+CFILES = main.c
 

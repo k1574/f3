@@ -1,19 +1,2 @@
-OBJ = ${SRC:%.c=%.o} $OBJ
-TGT = $NAME
-all :VQ: $TGT 
-$TGT : $OBJ
-	$LD -o $target $LDFLAGS $prereq
-CFLAGS = $CFLAGS $CPPFLAGS
-%.o :V: %.c
-	$CC -c -o $target $CFLAGS $prereq
-%.c :Q: $HDR
-	touch $target
-%.h :Q:
-	touch $target
-clean :V:
-	rm -rf $TGT *.o
-install :V: $TGT
-	cp -f $TGT $EXE/
-	chmod 0755 $EXE/$TGT
-uninstall :V:
-	rm -f $EXE/$TGT
+<mkconfig
+<$MKINCDIR/cbuild

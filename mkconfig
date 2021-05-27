@@ -1,9 +1,3 @@
-CC = tcc
-LD = $CC
-
-EXE = $HOME/exe
-SHR = $HOME/shr
-MAN = $SHR/man
-
+<$MKINCDIR/config
 DIRS = ff-info ff-rand
 

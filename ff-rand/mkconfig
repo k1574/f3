@@ -1,5 +1,4 @@
-NAME = ff-rand
-CPPFLAGS =
-CFLAGS = 
-LDFLAGS =
+<$MKINCDIR/config
+PROGNAME = ff-rand
+CFILES = main.c
 
