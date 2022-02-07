@@ -1,4 +1,6 @@
 <$MKINCDIR/config
 PROGNAME = ff-rand
+INCS = -I$INCDIR
 CFILES = main.c
+AFILES = $OBJDIR/ff.a
 
