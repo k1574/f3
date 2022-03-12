@@ -4,23 +4,22 @@
 #include <inttypes.h>
 #include <time.h>
 
-#include "../endian.h"
-#include "../farbfeld.h"
+#include <ff/ff.h>
 
 static char *argv0;
 
 void
 usage(void)
 {
-	fprintf(stderr, "usage: %s [width] [height]\n", argv0);
+	fprintf(stderr, "usage: %s <width> <height>\n", argv0);
 	exit(1);
 }
 
 int
 main(int argc, char *argv[])
 {
-	uint32_t w, h, s, i;
-	Pixel p;
+	u32 w, h, s, i;
+	FFPixel p;
 	argv0 = argv[0] ;
 
 	if(argc!=3)
@@ -33,23 +32,17 @@ main(int argc, char *argv[])
 		usage();
 
 	s = w*h ;
-	if(islittleendian()){
-		swapendian(&h, 4);
-		swapendian(&w, 4);
-	}
 	
 	srand(time(0));
 
-	printf("farbfeld");
-	fwrite(&w, 4, 1, stdout);
-	fwrite(&h, 4, 1, stdout);
+	ff_write_header(1, w, h);
 
 	for( i=0 ; i<s ; ++i){
 		p.r = rand() % 2 ? rand() : rand() * 2 ;
 		p.g = rand() % 2 ? rand() : rand() * 2 ;
 		p.b = rand() % 2 ? rand() : rand() * 2 ;
 		p.a = rand() % 2 ? rand() : rand() * 2 ;
-		fwrite(&p, 8, 1, stdout);
+		ff_write_pixel(1, &p);
 	}
 
 	return 0;
