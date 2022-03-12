@@ -1,8 +1,10 @@
-# fff
-fff - farbfeld filters set.
+# f3
+f3 - farbfeld filters set.
 
 
 ## Description.
 
 * ff-info: Retrieve the width and/or height of a picture. 
 * ff-rand: Make the image filled with random pixels.
+* stack: overlay images on each other as stack.
+

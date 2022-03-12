@@ -1,4 +1,6 @@
 <$MKINCDIR/config
 PROGNAME = ff-info
 CFILES = main.c
+INCS = -I$INCDIR
+AFILES = $OBJDIR/ff.a
 
