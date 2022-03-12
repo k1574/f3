@@ -1,0 +1,6 @@
+<$MKINCDIR/config
+PROGNAME = ff-stack
+CFILES = main.c
+INCS = -I$INCDIR
+AFILES = $OBJDIR/ff.a
+

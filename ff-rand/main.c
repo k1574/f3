@@ -32,7 +32,6 @@ main(int argc, char *argv[])
 		usage();
 
 	s = w*h ;
-	
 	srand(time(0));
 
 	ff_write_header(1, w, h);
