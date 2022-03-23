@@ -23,34 +23,10 @@ replace(FFPixel *buf, FFPixel *bg, FFPixel *fg)
 	ff_copy_pixel(buf, fg);
 }
 
-
-void
-skipn(int n)
-{
-	int i;
-	FFPixel buf;
-	for(i=0 ; i<n ; ++i)
-		ff_read_pixel(0, &buf);
-}
-
-
 int
 doimg(void)
 {
-	FFPixel buf1, buf2, *pbuf;
-	u32 wl, hl;
-	int i, j;
-	ff_read_header(0, &wl, &hl);
-	for(i=0 ; i<h && i<hl ; ++i){
-		for(j=0 ; j<w && j<wl ; ++j){
-			if(!ff_read_pixel(0, &buf1))
-				return 1 ;
-			layover(&buf2, buf + i*w + j, &buf1);
-			ff_copy_pixel(buf + i*w + j, &buf2);
-		}
-	}
-	
-	return 0 ;
+	return ff_lay_from_fd(0, buf, w, h, layover) ;
 }
 
 int
