@@ -12,8 +12,7 @@ enum Chan {
 
 char *argv0;
 int param;
-float input;
-u32 val = 0;
+float val = 0;
 
 void
 usage(void)
@@ -38,17 +37,17 @@ doimg(void)
 			return 1 ;
 		switch(param){
 		case Red :
-			buf.r = val ;
-			break;
+			buf.r *= val ;
+		break;
 		case Green :
-			buf.g = val ;
-			break;
+			buf.g *= val ;
+		break;
 		case Blue :
-			buf.b = val ;
-			break;
+			buf.b *= val ;
+		break;
 		case Alpha :
-			buf.a = val ;
-			break;
+			buf.a *= val ;
+		break;
 		default:
 		}
 
@@ -84,14 +83,13 @@ main(int argc, char *argv[])
 		break;
 	case 'a' :
 		param = Alpha;
+		break;
 	default:
 		usage();
 	}
 
 	if(argc == 3)
-		input = atof(argv[2]) ;
-
-	val = FFMaxValue * input ;
+		val = atof(argv[2]) ;
 
 	while(!doimg())
 		;
