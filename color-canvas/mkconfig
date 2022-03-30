@@ -1,0 +1,7 @@
+<$MKINCDIR/config
+
+PROGNAME = ff-color-canvas
+CFILES = `{ls *.c}
+INCS = -I$INCDIR
+AFILES = $OBJDIR/ff.a
+
